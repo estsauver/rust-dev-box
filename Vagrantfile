@@ -11,10 +11,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", inline: "apt-get --assume-yes install make"
   config.vm.provision "shell", inline: "apt-get --assume-yes install curl"
   config.vm.provision "shell", inline: "apt-get --assume-yes install git"
-  config.vm.provision "shell", inline: "mkdir /home/vagrant/dev"
-  config.vm.provision "shell", inline: "cd /home/vagrant/dev/ && git clone https://github.com/rust-lang/rust.git"
-  config.vm.provision "shell", inline: "cd /home/vagrant/dev/rust/ && ./configure"
-  config.vm.provision "shell", inline: "cd /home/vagrant/dev/rust/ && chmod -R 777 . && make && make install"
+  config.vm.provision "shell", path: "rust_devup.sh"
+
 
   # Provider specific settings.
   config.vm.provider "virtualbox" do |v|
