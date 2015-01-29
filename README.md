@@ -16,7 +16,7 @@ inspired by the rails-dev-box project.
 1. Clone the repo on your host machine. 
 
 ```bash
-git clone $$$REPO_URL HERE$$$
+git clone git@github.com:estsauver/rust-dev-box.git
 ```
 
 2. Launch the box. (This will take a while.)
@@ -30,10 +30,7 @@ After the installation, you can ssh into the box.
 
 ## Recommended Workflow
 
-After running vagrant up, the contents of the rust-dev-box
-directory will be available in the guest at `/vagrant`. If you clone
-your personal fork into the rust-dev-box, then you can edit it the editor
-of your choice on the host and run the tests inside the vm.
+Rust will be installed in the ~/dev/rust directory. 
 
 ## License
 
